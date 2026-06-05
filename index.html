@@ -109,6 +109,15 @@ main{padding-bottom:30px}
 .logo-wall img:hover{filter:none;opacity:1}
 .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:12px}
 .case{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:13px 14px}
+.voices{margin:22px 0 6px}
+.voices-h{font-weight:900;font-size:1.08rem;margin:0 0 4px}
+.voices-sub{color:var(--muted);font-size:.88rem;font-weight:700;margin:0 0 12px}
+.voices-stat{display:inline-flex;align-items:center;gap:8px;background:var(--soft);color:var(--dark);font-weight:800;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:.93rem}
+.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.voice{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:11px;padding:15px 16px}
+.voice p{margin:0 0 9px;font-size:.92rem;line-height:1.62}
+.voice cite{color:var(--muted);font-weight:800;font-size:.82rem;font-style:normal}
+@media(max-width:560px){.voice-grid{grid-template-columns:1fr}}
 .case b{display:block;font-weight:800;margin-bottom:3px;color:var(--ink)}
 .case span{color:var(--muted);font-size:.85rem;font-weight:700}
 .toast{position:fixed;left:50%;transform:translateX(-50%) translateY(12px);bottom:24px;background:#101828;color:#fff;padding:12px 18px;border-radius:9px;font-weight:800;opacity:0;transition:.2s;z-index:50}
@@ -161,6 +170,7 @@ footer a{color:var(--accent);font-weight:800;text-decoration:none}
 </section>
 
 <section class="clients"><div class="clients-h">阿峰老師服務過的製造／貿易／外銷相關企業</div><div class="clients-sub">同產業都在用 AI 加速開發、報價、談判 —— 想讓你的外銷團隊也上手？往下找老師聊聊。</div><div class="logo-wall"><img src="logos/itri.png" alt="工研院" loading="lazy"><img src="logos/inventec.svg" alt="英業達" loading="lazy"><img src="logos/csd.png" alt="中衛中心" loading="lazy"><img src="logos/dongjie.png" alt="東捷科技" loading="lazy"><img src="logos/taitra.svg" alt="外貿協會" loading="lazy"></div><div class="cases"><div class="case"><b>外貿協會 TAITRA</b><span>B2B 行銷 × AI 實戰講座</span></div><div class="case"><b>工研院 產業學院</b><span>製造業 AI 應用實戰培訓</span></div><div class="case"><b>英業達 Inventec</b><span>電子製造團隊 AI 內訓</span></div><div class="case"><b>中衛中心 CSD</b><span>製造業 AI 導入顧問輔導</span></div><div class="case"><b>東捷科技</b><span>自動化設備業 AI 培訓</span></div></div></section>
+<section class="voices"><div class="voices-h">學員怎麼說</div><div class="voices-sub">取自阿峰老師實際課程的學員見證</div><div class="voice-grid"><div class="voice"><p>「進公司前我對電腦幾乎零基礎，這是我第一次用 AI。我做業務、要做簡報，以前所有文字都自己想；現在把客戶需求貼進去，AI 很快就幫我生出一份簡報，從接到需求到產出快超多。」</p><cite>—— 業務人員</cite></div><div class="voice"><p>「以前只會用 ChatGPT，今天學到深度研究、趨勢分析這些技法。最有感的是——可以先問 AI「這個客戶可能會問什麼」，先演練再上場。」</p><cite>—— 中小企業學員</cite></div></div></section>
 <section class="afeng" id="afeng"><div class="afeng-card">
 <div class="afeng-top"><img class="afeng-av" src="afeng.jpg" alt="阿峰老師（黃敬峰）"><div><div class="afeng-name">阿峰老師（黃敬峰・AI峰哥）</div><div class="afeng-role">企業 AI 實戰培訓專家</div></div></div>
 <p class="afeng-slogan">「會用、懂用、好用、每天用」——讓 AI 變成<b>外銷團隊</b>每天在用的工具，不是聽完就忘的演講。</p>
