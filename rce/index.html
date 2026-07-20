@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>外銷 B2B 業務・AI 指令範本速查手冊｜阿峰老師</title>
+<meta name="description" content="外銷 B2B 業務 AI 指令範本速查手冊：RCE 黃金三角 48 塊積木，點角色＋情境＋期待自動組成完整指令，一鍵複製貼到 AI。阿峰老師（AI峰哥）企業 AI 實戰培訓。">
+<link rel="canonical" href="https://export-sales.autolab.cloud/rce/">
+<meta name="theme-color" content="#00D4FF">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="阿峰老師 AI 工具箱">
+<meta property="og:title" content="外銷 B2B 業務・AI 指令範本速查手冊｜阿峰老師">
+<meta property="og:description" content="RCE 黃金三角 48 塊外銷積木，挑三塊組出完整指令一鍵複製。">
+<meta property="og:url" content="https://export-sales.autolab.cloud/rce/">
+<meta property="og:image" content="https://export-sales.autolab.cloud/afeng.jpg">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://export-sales.autolab.cloud/afeng.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2300D4FF'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23062733' font-family='sans-serif' font-weight='bold'%3ER%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --cyan:#00D4FF; --cyan-deep:#0099BB; --navy:#0A1628; --teal:#0E7C86;
+  --orange:#FF6B35; --ink:#1C1C1E; --muted:#5A6472; --line:#E3E8EF;
+  --bg:#F4F7FA; --card:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter','Noto Sans TC','PingFang TC',system-ui,-apple-system,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;
+  padding-bottom:150px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+
+/* header */
+header{background:linear-gradient(135deg,#0A1628 0%,#123049 100%);color:#fff;padding:30px 0 26px}
+header .brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:13px;color:#8FB8CC;letter-spacing:.5px;margin-bottom:14px}
+header .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+header h1{font-size:30px;font-weight:900;letter-spacing:-.5px;line-height:1.25}
+header h1 .hl{color:var(--cyan)}
+header .sub{margin-top:10px;font-size:15px;color:#C7D4E0;max-width:760px}
+header .formula{margin-top:16px;display:inline-flex;flex-wrap:wrap;gap:8px;align-items:center;font-weight:800;font-size:14px}
+header .formula b{padding:5px 12px;border-radius:8px;color:#fff}
+header .formula .r{background:var(--cyan-deep)} header .formula .c{background:var(--teal)} header .formula .e{background:var(--orange)}
+header .formula .eq{color:#8FB8CC;font-size:18px}
+header .formula .res{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25)}
+
+/* controls */
+.controls{position:sticky;top:0;z-index:50;background:rgba(244,247,250,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);padding:12px 0}
+.controls .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+#q{flex:1 1 280px;min-width:0;padding:11px 15px;border:1.5px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit;background:#fff}
+#q:focus{outline:none;border-color:var(--cyan)}
+.jump{display:flex;gap:6px}
+.jump a{text-decoration:none;font-weight:800;font-size:13px;padding:9px 13px;border-radius:9px;color:#fff}
+.jump a.jr{background:var(--cyan-deep)} .jump a.jc{background:var(--teal)} .jump a.je{background:var(--orange)}
+.hint{font-size:13px;color:var(--muted);margin-top:8px}
+.hint b{color:var(--ink)}
+
+/* sections */
+section{padding:26px 0 6px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.sec-badge{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:900;font-size:22px;flex:0 0 auto}
+.sec-head h2{font-size:22px;font-weight:900}
+.sec-head .zh{color:var(--muted);font-weight:700;font-size:14px}
+#sec-r .sec-badge{background:var(--cyan-deep)} #sec-c .sec-badge{background:var(--teal)} #sec-e .sec-badge{background:var(--orange)}
+
+.cat{margin-top:18px}
+.cat-title{font-weight:800;font-size:15px;color:var(--navy);margin-bottom:10px;padding-left:11px;border-left:4px solid var(--cyan)}
+#sec-c .cat-title{border-color:var(--teal)} #sec-e .cat-title{border-color:var(--orange)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:11px}
+
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;cursor:pointer;
+  transition:.13s;position:relative;user-select:none}
+.card:hover{border-color:var(--cyan);box-shadow:0 5px 16px rgba(0,90,120,.09);transform:translateY(-1px)}
+.card.sel{border-color:var(--cyan);background:#F0FBFF;box-shadow:0 0 0 2px rgba(0,212,255,.35)}
+#sec-e .card.sel,#sec-c .card.sel{background:#FFF6F1}
+#sec-c .card.sel{background:#EEFAFB}
+.card .nm{font-weight:800;font-size:15px;color:var(--ink);display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.card .meta{font-size:12px;font-weight:700;color:var(--cyan-deep);white-space:nowrap}
+.card .ds{font-size:13.5px;color:var(--muted);margin-top:5px}
+.card .pick{position:absolute;top:10px;right:11px;font-size:11px;font-weight:800;color:var(--cyan-deep);opacity:0;transition:.13s}
+.card:hover .pick{opacity:.7}
+.card.sel .pick{opacity:1;color:var(--cyan-deep)}
+.card.sel .pick::before{content:"✓ 已選"}
+.card:not(.sel) .pick::before{content:"＋ 選入"}
+
+/* combiner (sticky bottom) */
+.combiner{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:2px solid var(--cyan);
+  box-shadow:0 -6px 24px rgba(10,22,40,.13)}
+.combiner .cwrap{max-width:1180px;margin:0 auto;padding:12px 18px;display:flex;gap:14px;align-items:stretch}
+.slots{display:flex;gap:8px;flex:0 0 auto}
+.slot{width:150px;border:1.5px dashed var(--line);border-radius:9px;padding:7px 9px;font-size:12px;position:relative}
+.slot .lbl{font-weight:900;font-size:11px;letter-spacing:.5px}
+.slot.r .lbl{color:var(--cyan-deep)} .slot.c .lbl{color:var(--teal)} .slot.e .lbl{color:var(--orange)}
+.slot .val{color:var(--ink);font-weight:700;margin-top:2px;font-size:12.5px;line-height:1.35;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:16px}
+.slot .val.empty{color:#AEB8C4;font-weight:500}
+.slot.filled.r{border-style:solid;border-color:var(--cyan-deep);background:#F0FBFF}
+.slot.filled.c{border-style:solid;border-color:var(--teal);background:#EEFAFB}
+.slot.filled.e{border-style:solid;border-color:var(--orange);background:#FFF6F1}
+.out{flex:1 1 auto;display:flex;flex-direction:column;min-width:0}
+.out .otop{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.out .otop b{font-size:12px;font-weight:900;color:var(--navy)}
+.out .otop .acts{display:flex;gap:7px}
+.btn{border:none;border-radius:8px;padding:7px 14px;font-weight:800;font-size:13px;cursor:pointer;font-family:inherit}
+.btn.copy{background:var(--cyan);color:#062733}
+.btn.copy:hover{background:#00b8e0}
+.btn.clr{background:#EEF2F6;color:var(--muted)}
+#outbox{flex:1;border:1.5px solid var(--line);border-radius:9px;padding:8px 11px;font-size:13px;color:var(--ink);
+  background:#FAFBFC;overflow-y:auto;max-height:74px;white-space:pre-wrap;line-height:1.5}
+#outbox.empty{color:#AEB8C4}
+
+footer{text-align:center;color:var(--muted);font-size:13px;padding:26px 18px 10px}
+footer a{color:var(--cyan-deep);text-decoration:none;font-weight:700}
+.toast{position:fixed;left:50%;bottom:170px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;
+  padding:11px 22px;border-radius:10px;font-weight:800;font-size:14px;opacity:0;transition:.25s;pointer-events:none;z-index:99}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.nohit{display:none;color:var(--muted);padding:14px;font-size:14px}
+
+@media(max-width:720px){
+  header h1{font-size:23px} .sec-head h2{font-size:19px}
+  .combiner .cwrap{flex-direction:column;gap:9px;padding:10px 14px}
+  .slots{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+  .slot{width:auto}
+  #outbox{max-height:52px}
+  body{padding-bottom:230px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span>阿峰老師（AI峰哥）・企業 AI 實戰培訓</div>
+    <h1>外銷 B2B 業務・<span class="hl">AI 指令範本</span>速查手冊</h1>
+    <div class="sub">RCE 黃金三角：把「你是誰、現在什麼情境、要 AI 幫你做什麼」三塊積木湊起來，就是一句能用的完整指令。這裡幫外銷業務備好 48 塊現成積木——挑三塊，複製，貼到 AI。</div>
+    <div class="formula">
+      <b class="r">R 角色</b><span class="eq">＋</span><b class="c">C 情境</b><span class="eq">＋</span><b class="e">E 期待</b><span class="eq">＝</span><b class="res">一句完整指令</b>
+    </div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="wrap">
+    <div class="row">
+      <input id="q" placeholder="🔎 搜尋積木：開發信 / 議價 / L/C / CBAM / 客訴…">
+      <div class="jump">
+        <a class="jr" href="#sec-r">R 角色</a>
+        <a class="jc" href="#sec-c">C 情境</a>
+        <a class="je" href="#sec-e">E 期待</a>
+      </div>
+    </div>
+    <div class="hint">用法：點卡片會<b>選入下方組合器</b>（R / C / E 各挑一塊），下方即時組出完整指令 →「複製指令」貼到 ChatGPT / Claude / Gemini。只選一塊也能複製那一段。</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div id="nohit" class="nohit">找不到符合的積木，換個關鍵字試試。</div>
+
+  <section id="sec-r">
+    <div class="sec-head"><div class="sec-badge">R</div><div><h2>角色範本 <span class="zh">／ 你要 AI 扮演誰</span></h2></div></div>
+    <div id="grid-r"></div>
+  </section>
+
+  <section id="sec-c">
+    <div class="sec-head"><div class="sec-badge">C</div><div><h2>情境範本 <span class="zh">／ 你現在卡在哪</span></h2></div></div>
+    <div id="grid-c"></div>
+  </section>
+
+  <section id="sec-e">
+    <div class="sec-head"><div class="sec-badge">E</div><div><h2>期待範本 <span class="zh">／ 你要 AI 交出什麼</span></h2></div></div>
+    <div id="grid-e"></div>
+  </section>
+</div>
+
+<footer>
+  外銷 B2B 業務 AI 指令範本速查手冊 ・ by 阿峰老師（AI峰哥）<br>
+  企業 AI 實戰培訓　<a href="https://www.autolab.cloud" target="_blank" rel="noopener">autolab.cloud</a>　｜　完整 306 題工具箱：<a href="https://export-sales.autolab.cloud/" rel="noopener">export-sales.autolab.cloud</a>
+</footer>
+
+<div class="combiner">
+  <div class="cwrap">
+    <div class="slots">
+      <div class="slot r" id="slot-r"><div class="lbl">R 角色</div><div class="val empty">未選</div></div>
+      <div class="slot c" id="slot-c"><div class="lbl">C 情境</div><div class="val empty">未選</div></div>
+      <div class="slot e" id="slot-e"><div class="lbl">E 期待</div><div class="val empty">未選</div></div>
+    </div>
+    <div class="out">
+      <div class="otop"><b>🧩 組合出來的指令</b><div class="acts">
+        <button class="btn clr" onclick="clearAll()">清空</button>
+        <button class="btn copy" onclick="copyOut()">複製指令</button>
+      </div></div>
+      <div id="outbox" class="empty">選一個角色、一個情境、一個期待，這裡就會組出完整指令…</div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">已複製 ✓</div>
+
+<script>
+const DATA={
+ r:[
+  {cat:"🤝 業務開發與談判類",name:"資深外銷業務總監",meta:"30年・機械/零件外銷",ds:"帶過歐美日買主，開發到成交全流程都熟"},
+  {cat:"🤝 業務開發與談判類",name:"國際商務談判專家",meta:"25年・跨國採購出身",ds:"站在買主立場拆你的底線，教你價格與條件攻防"},
+  {cat:"🤝 業務開發與談判類",name:"海外市場開發經理",meta:"20年・新興市場",ds:"專攻東南亞/中東/中南美的買主開發與通路布局"},
+  {cat:"🤝 業務開發與談判類",name:"大客戶經營顧問 KAM",meta:"18年・B2B 工業品",ds:"經營百萬美元級客戶的長期關係與再購"},
+  {cat:"🔍 市場與買主情報類",name:"國際市場研究分析師",meta:"15年・產業情報",ds:"快速掃出目標國的市場規模、進口趨勢與關稅"},
+  {cat:"🔍 市場與買主情報類",name:"買主背景調查專家",meta:"12年・徵信 KYC",ds:"查買主的財務、信用、決策鏈與真偽"},
+  {cat:"🔍 市場與買主情報類",name:"競品情報分析師",meta:"15年・製造業",ds:"拆解中國/越南競品的價格與話術，找出你的差異化"},
+  {cat:"🔍 市場與買主情報類",name:"產業趨勢顧問",meta:"20年・供應鏈",ds:"判讀 CBAM/ESG/供應鏈重組對外銷的衝擊"},
+  {cat:"📄 外貿文件與英文溝通類",name:"資深國貿單證/報關專家",meta:"25年・進出口",ds:"PI/CI/PL/L/C/產證，一眼抓出文件地雷"},
+  {cat:"📄 外貿文件與英文溝通類",name:"國際貿易法遵顧問",meta:"20年・貿易法規",ds:"Incoterms、原產地、認證、CBAM 合規把關"},
+  {cat:"📄 外貿文件與英文溝通類",name:"母語級商務英文專家",meta:"18年・外商",ds:"從開發信到客訴回覆，寫得專業又有溫度"},
+  {cat:"📄 外貿文件與英文溝通類",name:"技術文件工程師",meta:"15年・精密製造",ds:"把規格/測試報告翻成買主看得懂的英文賣點"}
+ ],
+ c:[
+  {cat:"🚀 開發與拜訪類",name:"開發信",ds:"第一封信給沒往來過的海外潛在買主，要讓對方願意回"},
+  {cat:"🚀 開發與拜訪類",name:"買主調查",ds:"拜訪或報價前，徹底摸清買主的背景、規模與真實需求"},
+  {cat:"🚀 開發與拜訪類",name:"展會邀約",ds:"展會前主動邀目標買主到攤位，並排定會議時間"},
+  {cat:"🚀 開發與拜訪類",name:"拜訪前準備",ds:"明天要視訊/實體拜訪買主，備妥談話重點與提問"},
+  {cat:"🚀 開發與拜訪類",name:"詢盤分級",ds:"手上一堆詢盤，要分出誰是真買主、排出跟進優先"},
+  {cat:"🚀 開發與拜訪類",name:"冷客喚醒",ds:"重新聯繫半年沒回、報過價卻沒下單的買主"},
+  {cat:"💰 報價與談判類",name:"報價單",ds:"給買主一份專業的英文報價，含交易條件與產品規格"},
+  {cat:"💰 報價與談判類",name:"議價回應",ds:"買主嫌你比中國/越南貴，要回應但不直接降價"},
+  {cat:"💰 報價與談判類",name:"付款條件",ds:"買主要求 O/A 賒帳，要談到雙方都能接受的付款方式"},
+  {cat:"💰 報價與談判類",name:"比較競品",ds:"買主拿競品的規格與價格來比，要突顯你的價值"},
+  {cat:"💰 報價與談判類",name:"樣品跟進",ds:"樣品寄出後，推進買主的測試結果並帶到下一步"},
+  {cat:"💰 報價與談判類",name:"交期攻防",ds:"買主要求的交期你做不到，要談出替代方案"},
+  {cat:"📦 訂單與售後類",name:"PI／合約",ds:"依談定的條件開立 PI 或擬定買賣合約"},
+  {cat:"📦 訂單與售後類",name:"L/C 審核",ds:"買主開來的信用狀，要抓出陷阱與不符點"},
+  {cat:"📦 訂單與售後類",name:"出貨安排",ds:"協調文件、物流與交貨，確保順利出貨"},
+  {cat:"📦 訂單與售後類",name:"驗廠準備",ds:"買主要來驗廠，要備妥資料與應答腳本"},
+  {cat:"📦 訂單與售後類",name:"客訴處理",ds:"買主反映品質問題，要回應又保住關係"},
+  {cat:"📦 訂單與售後類",name:"售後再購",ds:"出貨後追蹤滿意度，鋪陳下一張訂單"}
+ ],
+ e:[
+  {cat:"✉️ 英文商務溝通類",ds:"幫我寫一封專業、有鉤子的英文開發信，讓買主願意回信"},
+  {cat:"✉️ 英文商務溝通類",ds:"幫我把這段中文訊息改寫成母語級的商務英文"},
+  {cat:"✉️ 英文商務溝通類",ds:"幫我準備視訊拜訪的英文開場、問題清單與收尾"},
+  {cat:"✉️ 英文商務溝通類",ds:"幫我回這封客訴信：先道歉、給方案、又保住訂單"},
+  {cat:"✉️ 英文商務溝通類",ds:"幫我把這份技術規格翻成買主看得懂的英文賣點"},
+  {cat:"✉️ 英文商務溝通類",ds:"幫我寫展會後的英文跟進信，把攤位上聊過的重點接回來"},
+  {cat:"📊 市場與買主分析類",ds:"幫我分析這個目標國市場：規模、進口趨勢、關稅與競爭"},
+  {cat:"📊 市場與買主分析類",ds:"幫我調查這個買主的背景、決策鏈與可能的真實需求"},
+  {cat:"📊 市場與買主分析類",ds:"幫我拆解競品的價格與話術，找出我的差異化切角"},
+  {cat:"📊 市場與買主分析類",ds:"幫我把展會名單分級，排出優先拜訪順序與理由"},
+  {cat:"📊 市場與買主分析類",ds:"幫我判讀 CBAM／認證對這筆外銷的影響與對策"},
+  {cat:"📊 市場與買主分析類",ds:"幫我從買主的官網與新聞，整理出這次拜訪的切入點"},
+  {cat:"🎯 報價與談判話術類",ds:"幫我擬一份報價談判策略，含讓步階梯與底線"},
+  {cat:"🎯 報價與談判話術類",ds:"幫我準備回應「你比中國貴」的三種話術"},
+  {cat:"🎯 報價與談判話術類",ds:"幫我把付款條件（O/A vs L/C）的攻防寫成談判腳本"},
+  {cat:"🎯 報價與談判話術類",ds:"幫我寫一段突顯價值、不靠降價的說服話術"},
+  {cat:"🎯 報價與談判話術類",ds:"幫我整理這次談判的結論與下一步跟進信"},
+  {cat:"🎯 報價與談判話術類",ds:"幫我把交期做不到的情況，寫成三個買主能接受的替代方案"}
+ ]
+};
+const sel={r:null,c:null,e:null};
+
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function build(type){
+  const groups={};
+  DATA[type].forEach((it,i)=>{(groups[it.cat]=groups[it.cat]||[]).push({...it,i})});
+  let html="";
+  for(const cat in groups){
+    html+=`<div class="cat" data-cat><div class="cat-title">${esc(cat)}</div><div class="grid">`;
+    groups[cat].forEach(it=>{
+      const meta=it.meta?`<span class="meta">${esc(it.meta)}</span>`:"";
+      const nm=it.name?`<div class="nm">${esc(it.name)}${meta}</div>`:"";
+      html+=`<div class="card" data-type="${type}" data-i="${it.i}" data-txt="${esc((it.name||"")+' '+it.ds)}" onclick="pick('${type}',${it.i})">
+        <span class="pick"></span>${nm}<div class="ds">${esc(it.ds)}</div></div>`;
+    });
+    html+=`</div></div>`;
+  }
+  document.getElementById('grid-'+type).innerHTML=html;
+}
+['r','c','e'].forEach(build);
+
+function pick(type,i){
+  sel[type]=(sel[type]===i)?null:i;
+  document.querySelectorAll(`.card[data-type="${type}"]`).forEach(c=>{
+    c.classList.toggle('sel', +c.dataset.i===sel[type]);
+  });
+  render();
+}
+function slotText(type){
+  if(sel[type]===null) return null;
+  const it=DATA[type][sel[type]];
+  if(type==='r') return `你是一位${it.name}（${it.meta}），${it.ds}。`;
+  if(type==='c') return `我現在的情境是：${it.ds}。`;
+  return `${it.ds}。`;
+}
+function shortLabel(type){
+  if(sel[type]===null) return null;
+  const it=DATA[type][sel[type]];
+  return it.name || it.ds;
+}
+function render(){
+  ['r','c','e'].forEach(t=>{
+    const slot=document.getElementById('slot-'+t);
+    const val=slot.querySelector('.val');
+    const lbl=shortLabel(t);
+    if(lbl){slot.classList.add('filled');val.classList.remove('empty');val.textContent=lbl;}
+    else{slot.classList.remove('filled');val.classList.add('empty');val.textContent='未選';}
+  });
+  const parts=['r','c','e'].map(slotText).filter(Boolean);
+  const box=document.getElementById('outbox');
+  if(parts.length){box.classList.remove('empty');box.textContent=parts.join('\n');}
+  else{box.classList.add('empty');box.textContent='選一個角色、一個情境、一個期待，這裡就會組出完整指令…';}
+}
+function clearAll(){sel.r=sel.c=sel.e=null;document.querySelectorAll('.card.sel').forEach(c=>c.classList.remove('sel'));render();}
+function copyOut(){
+  const parts=['r','c','e'].map(slotText).filter(Boolean);
+  if(!parts.length){toast('先點選積木再複製');return;}
+  navigator.clipboard.writeText(parts.join('\n')).then(()=>toast('已複製 ✓')).catch(()=>toast('複製失敗，請手動選取'));
+}
+let tmr;
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(tmr);tmr=setTimeout(()=>t.classList.remove('show'),1500);}
+
+// search filter
+document.getElementById('q').addEventListener('input',e=>{
+  const kw=e.target.value.trim().toLowerCase();
+  let any=false;
+  document.querySelectorAll('.card').forEach(c=>{
+    const hit=!kw||c.dataset.txt.toLowerCase().includes(kw);
+    c.style.display=hit?'':'none'; if(hit)any=true;
+  });
+  document.querySelectorAll('.cat[data-cat]').forEach(cat=>{
+    const vis=[...cat.querySelectorAll('.card')].some(c=>c.style.display!=='none');
+    cat.style.display=vis?'':'none';
+  });
+  document.querySelectorAll('section').forEach(s=>{
+    const vis=[...s.querySelectorAll('.card')].some(c=>c.style.display!=='none');
+    s.style.display=vis?'':'none';
+  });
+  document.getElementById('nohit').style.display=any?'none':'block';
+});
+</script>
+</body>
+</html>
