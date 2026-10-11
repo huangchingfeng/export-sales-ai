@@ -1,0 +1,295 @@
+/* ============================================================
+   Autolab Sign-Off 換膚層｜export.autolab.cloud（B2B 外銷業務 AI）2026-10-11
+   以 tool-site-theme/autolab-signoff-theme.css 的色票為準，針對本站自有模板改寫。
+   用法：<head> 最後一行 <link rel="stylesheet" href="assets/autolab-signoff-theme.css">
+   只覆蓋外觀、不動功能；拿掉這行 link 就回到舊樣子。
+   規範：主色青 #00708A、墨 #1C1C1E、次文字 #636366、霧 #F5F5F7、線 #E5E5EA、方角 4px、無陰影光暈
+     點綴：芒果金 #FFC233（只放墨字）、淺芒果 #FFF1D6、蘭花洋紅 #9C2A6B（白字）、淺蘭花 #F6E6F0
+     橘 #FF6B35 只給工具列「聊內訓」一顆，實心墨字
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap");
+
+:root {
+  --so-teal: #00708A;
+  --so-teal-dk: #005A6F;
+  --so-teal-lt: #E8F4F6;
+  --so-ink: #1C1C1E;
+  --so-sub: #636366;
+  --so-mist: #F5F5F7;
+  --so-line: #E5E5EA;
+  --so-mango: #FFC233;
+  --so-mango-lt: #FFF1D6;
+  --so-orchid: #9C2A6B;
+  --so-orchid-lt: #F6E6F0;
+  --so-orange: #FF6B35;
+
+  /* 接管本站原本的變數 */
+  --blue: var(--so-teal);
+  --dark: var(--so-teal-dk);
+  --ink: var(--so-ink);
+  --muted: var(--so-sub);
+  --line: var(--so-line);
+  --bg: var(--so-mist);
+  --surface: #FFFFFF;
+  --soft: var(--so-teal-lt);
+  --radius: 4px;
+  --accent: var(--so-teal);
+}
+
+html body {
+  font-family: "Inter", "Noto Sans TC", system-ui, -apple-system, "PingFang TC", sans-serif;
+  color: var(--so-ink);
+  background: var(--so-mist);
+}
+html body h1, html body h2, html body .brand, html body .clients-h, html body .voices-h, html body .afeng-name {
+  font-family: "Inter Tight", "Noto Sans TC", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- 兄弟工具列：深藍 → 白底細線、方角 ---------- */
+html body .afeng-eco-bar {
+  --eco-accent: var(--so-teal);
+  background: #FFFFFF;
+  color: var(--so-ink);
+  border-bottom: 1px solid var(--so-line);
+  box-shadow: none;
+}
+html body .afeng-eco-bar .ae-brand { color: var(--so-ink); }
+html body .afeng-eco-bar .ae-brand small { color: var(--so-sub); }
+html body .afeng-eco-bar .ae-brand .ae-dot {
+  width: 22px; height: 22px; border-radius: 0; box-shadow: none;
+  background: url("autolab-icon-32.svg") center / contain no-repeat;
+}
+html body .afeng-eco-bar .ae-item {
+  color: var(--so-ink);
+  background: var(--so-mist);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  min-height: 36px;
+}
+html body .afeng-eco-bar .ae-item:hover {
+  color: var(--so-teal);
+  background: var(--so-teal-lt);
+  border-color: var(--so-teal);
+}
+html body .afeng-eco-bar .ae-item.ae-active,
+html body .afeng-eco-bar[data-active="export-sales-ai"] a[data-key="export-sales-ai"] {
+  color: #FFFFFF;
+  background: var(--so-teal);
+  border-color: var(--so-teal);
+  box-shadow: none;
+}
+html body .afeng-eco-bar .ae-fade { background: linear-gradient(90deg, rgba(255,255,255,0), #FFFFFF 86%); }
+/* 全頁唯一的橘：聊內訓（預約）。實心、墨字、無光暈 */
+html body .afeng-eco-bar .ae-cta {
+  color: var(--so-ink);
+  background: var(--so-orange);
+  border-radius: 4px;
+  box-shadow: none;
+}
+html body .afeng-eco-bar .ae-line { border-radius: 4px; background: #06C755; }
+
+/* ---------- 站內頁首 ---------- */
+html body header.nav {
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid var(--so-line);
+  box-shadow: none;
+}
+html body .brand { color: var(--so-ink); font-weight: 900; }
+html body .brand .mk {
+  width: 40px; height: 40px;
+  background: url("autolab-icon-64.svg") center / contain no-repeat;
+  border-radius: 0;
+  font-size: 0; color: transparent;   /* 藏掉原本的 emoji，只留章 */
+}
+html body .brand small {
+  color: var(--so-sub);
+  font-family: "JetBrains Mono", "Noto Sans TC", monospace;
+  font-weight: 500; font-size: .72rem; letter-spacing: .02em;
+}
+html body .nav a.cta { background: var(--so-ink); color: #FFFFFF; border-radius: 4px; }
+html body .nav a.cta:hover { background: var(--so-teal); }
+html body .a2hs { background: var(--so-teal); }
+html body .a2hs button { border-radius: 4px; }
+
+/* ---------- Hero：白底＋簽名線＋章壓線 ---------- */
+html body .hero {
+  position: relative;
+  background: #FFFFFF;
+  border-bottom: 0;
+}
+html body .hero-in { padding-bottom: 76px; position: relative; z-index: 1; }
+html body .hero::before {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 36px;
+  height: 3px; background: var(--so-ink);
+  pointer-events: none;
+}
+html body .hero::after {
+  content: "";
+  position: absolute; right: max(24px, calc((100% - 780px) / 2));
+  bottom: 37.5px; width: 72px; height: 72px;
+  transform: translateY(50%);
+  background: #FFFFFF url("autolab-icon-64.svg") center / contain no-repeat;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+}
+html body .kicker {
+  color: var(--so-ink);
+  background: var(--so-mango);
+  border-radius: 2px;
+  padding: 4px 10px;
+  font-family: "JetBrains Mono", "Noto Sans TC", monospace;
+  font-weight: 700;
+}
+html body h1 { color: var(--so-ink); font-weight: 900; font-size: clamp(1.6rem, 3.6vw, 2.3rem); line-height: 1.25; }
+html body .hero p { color: var(--so-sub); }
+html body .hero p b { color: var(--so-ink); }
+html body .byline { color: var(--so-ink); }
+html body .byline .av { border-radius: 50%; }
+html body .byline u { color: var(--so-teal); border-bottom-color: var(--so-teal); }
+html body .compliance { background: var(--so-mango-lt); border: 1px solid var(--so-mango); color: var(--so-ink); border-radius: 4px; }
+
+/* 第二入口（RCE 速查手冊）：原本青藍底 → 蘭花洋紅白字 */
+html body .hero a[href="/rce/"] {
+  background: var(--so-orchid) !important;
+  color: #FFFFFF !important;
+  border-radius: 4px !important;
+}
+html body .hero a[href="/rce/"]:hover { background: #7E2156 !important; }
+
+/* 三個數字：社群三色色條 */
+html body .metrics { gap: 12px; }
+html body .metric {
+  min-width: 112px;
+  background: var(--so-mist);
+  border-top: 4px solid var(--so-teal);
+  border-radius: 4px;
+  padding: 10px 14px 8px;
+}
+html body .metric:nth-child(2) { border-top-color: var(--so-mango); }
+html body .metric:nth-child(3) { border-top-color: var(--so-orchid); }
+html body .metric strong { color: var(--so-ink); font-family: "Inter Tight", "Noto Sans TC", sans-serif; font-weight: 800; }
+
+html body .wishbtn { border-radius: 4px; background: var(--so-teal); }
+html body .wishbtn:hover { background: var(--so-teal-dk); }
+
+/* ---------- 三步驟卡 ---------- */
+html body .step {
+  border: 1px solid var(--so-line);
+  border-radius: 4px;
+  box-shadow: none;
+}
+html body .step-n {
+  border-radius: 4px;
+  background: var(--so-teal);
+  font-family: "Inter Tight", sans-serif;
+}
+html body #s2 .step-n { background: var(--so-mango); color: var(--so-ink); }
+html body #s3 .step-n { background: var(--so-orchid); color: #FFFFFF; }
+html body .step-h h2 { box-shadow: inset 0 -8px 0 var(--so-mango-lt); display: inline; padding: 0 2px; }
+html body .step-h .sub { color: var(--so-sub); }
+
+html body .bigsearch input,
+html body .field input, html body .field textarea {
+  border-radius: 4px;
+  border-color: #C7C7CC;
+}
+html body .bigsearch input:focus,
+html body .field input:focus, html body .field textarea:focus {
+  border-color: var(--so-teal);
+  box-shadow: 0 0 0 3px rgba(0,112,138,.15);
+}
+html body .btn { border-radius: 4px; }
+html body .btn.primary { background: var(--so-teal); color: #FFFFFF; }
+html body .btn.primary:hover { background: var(--so-teal-dk); }
+html body .btn.ghost { border-color: #C7C7CC; }
+html body .btn.ghost:hover { border-color: var(--so-teal); color: var(--so-teal); }
+html body .btn.ok { background: var(--so-teal-dk); }
+html body .btn.line { background: #06C755; }
+
+/* 熱門／最愛／最近 */
+html body .pinchip { border-radius: 4px; }
+html body .pinchip:hover { border-color: var(--so-teal); background: var(--so-teal-lt); }
+html body .pinrow.hot .pinchip { border-color: var(--so-mango); background: var(--so-mango-lt); }
+html body .pinrow.hot .pinchip:hover { border-color: var(--so-ink); background: var(--so-mango); }
+
+/* 用途四選一 */
+html body .kchip { border-radius: 4px; color: var(--so-ink); }
+html body .kchip:hover { border-color: var(--so-teal); }
+html body .kchip[data-k="all"].on { background: var(--so-ink); }
+html body .kchip[data-k="research"].on { background: var(--so-teal); }
+html body .kchip[data-k="write"].on { background: var(--so-orchid); }
+html body .kchip[data-k="analyze"].on { background: var(--so-mango); color: var(--so-ink); }
+html body .kchip[data-k="image"].on { background: var(--so-ink); }
+html body .kbadge { border-radius: 2px; }
+html body .kb-research { background: var(--so-teal-lt); color: var(--so-teal); }
+html body .kb-write { background: var(--so-orchid-lt); color: var(--so-orchid); }
+html body .kb-analyze { background: var(--so-mango-lt); color: var(--so-ink); }
+html body .kb-image { background: var(--so-mist); color: var(--so-ink); }
+
+/* 分類 chips */
+html body .chip { border-radius: 4px; color: var(--so-ink); }
+html body .chip:hover { border-color: var(--so-teal); }
+html body .chip.on { background: var(--so-ink); border-color: var(--so-ink); color: #FFFFFF; }
+
+/* 提示詞卡片 */
+html body .card { border-radius: 4px; border-color: var(--so-line); }
+html body .card:hover { border-color: var(--so-teal); box-shadow: none; transform: none; }
+html body .card.on {
+  border-color: var(--so-teal);
+  background: var(--so-teal-lt);
+  box-shadow: inset 4px 0 0 var(--so-teal);
+}
+html body .cardcat { font-family: "JetBrains Mono", "Noto Sans TC", monospace; font-weight: 500; letter-spacing: .01em; }
+html body .cardtool { color: var(--so-sub); }
+html body .star:hover { background: var(--so-mist); }
+html body .star.on { color: var(--so-mango); }
+
+html body .tag { border-radius: 2px; background: var(--so-mist); color: var(--so-ink); }
+html body .tag.lead { background: var(--so-teal-lt); color: var(--so-teal); }
+html body #output { border-radius: 4px; background: var(--so-mist); border-color: var(--so-line); }
+html body .exwrap { border-radius: 4px; background: var(--so-mist); }
+html body .exlb { background: rgba(28,28,30,.9); }
+html body .exlb img { border-radius: 4px; box-shadow: none; }
+html body .exlbx { border-radius: 4px; }
+
+/* ---------- 實績／見證／老師卡 ---------- */
+html body .logo-wall { border-radius: 4px; }
+html body .case { border-radius: 4px; border-top: 3px solid var(--so-teal); }
+html body .case:nth-child(3n+2) { border-top-color: var(--so-mango); }
+html body .case:nth-child(3n) { border-top-color: var(--so-orchid); }
+html body .voices-stat { border-radius: 4px; background: var(--so-teal-lt); color: var(--so-teal-dk); }
+html body .voice { border-radius: 4px; border-left: 4px solid var(--so-teal); }
+html body .voice + .voice { border-left-color: var(--so-orchid); }
+
+html body .afeng-card {
+  background: #FFFFFF;
+  border: 1px solid var(--so-line);
+  border-top: 3px solid var(--so-ink);
+  border-radius: 4px;
+}
+html body .afeng-av { box-shadow: none; border: 2px solid var(--so-line); }
+html body .afeng-role { font-family: "JetBrains Mono", "Noto Sans TC", monospace; font-weight: 500; }
+html body .afeng-bullets li::marker { color: var(--so-teal); }
+html body .afeng-demo {
+  background: var(--so-mango-lt);
+  border: 1px solid var(--so-mango);
+  border-radius: 4px;
+}
+html body .afeng-contact a { color: var(--so-teal); }
+
+html body .toast { background: var(--so-ink); border-radius: 4px; }
+html body footer { border-top: 1px solid var(--so-line); }
+html body footer a { color: var(--so-teal); }
+
+@media (max-width: 760px) {
+  html body .hero::after { width: 48px; height: 48px; right: 16px; }
+  html body .hero::before { bottom: 30px; }
+  html body .hero::after { bottom: 31.5px; }
+  html body .hero-in { padding-bottom: 64px; }
+  html body .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  html body .metric { min-width: 0; padding: 8px 10px 6px; }
+}

@@ -1,0 +1,140 @@
+/* ============================================================
+   Autolab Sign-Off 換膚層｜export.autolab.cloud/rce/（RCE 指令範本速查手冊）2026-10-11
+   用法：rce/index.html <head> 最後一行 <link rel="stylesheet" href="../assets/autolab-signoff-rce.css">
+   只覆蓋外觀、不動功能；拿掉這行 link 就回到舊樣子。
+   三塊積木配色：R 角色＝主色青、C 情境＝芒果金（墨字）、E 期待＝蘭花洋紅（白字）
+   本頁沒有預約鈕，所以全頁不用橘。
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap");
+
+:root {
+  --so-teal: #00708A;
+  --so-teal-dk: #005A6F;
+  --so-teal-lt: #E8F4F6;
+  --so-ink: #1C1C1E;
+  --so-sub: #636366;
+  --so-mist: #F5F5F7;
+  --so-line: #E5E5EA;
+  --so-mango: #FFC233;
+  --so-mango-lt: #FFF1D6;
+  --so-orchid: #9C2A6B;
+  --so-orchid-lt: #F6E6F0;
+
+  /* 接管本頁原本的變數 */
+  --cyan: var(--so-teal);
+  --cyan-deep: var(--so-teal);
+  --navy: var(--so-ink);
+  --teal: var(--so-mango);
+  --orange: var(--so-orchid);
+  --ink: var(--so-ink);
+  --muted: var(--so-sub);
+  --line: var(--so-line);
+  --bg: var(--so-mist);
+  --card: #FFFFFF;
+}
+
+html body {
+  font-family: "Inter", "Noto Sans TC", system-ui, -apple-system, "PingFang TC", sans-serif;
+  color: var(--so-ink);
+  background: var(--so-mist);
+}
+html body h1, html body h2, html body .tool-nm {
+  font-family: "Inter Tight", "Noto Sans TC", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- 頁首：深藍 → 白底＋簽名線＋章 ---------- */
+html body header {
+  position: relative;
+  background: #FFFFFF;
+  color: var(--so-ink);
+  padding: 30px 0 76px;
+}
+html body header::before {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 36px;
+  height: 3px; background: var(--so-ink);
+  pointer-events: none;
+}
+html body header::after {
+  content: "";
+  position: absolute; right: max(18px, calc((100% - 1180px) / 2 + 18px));
+  bottom: 37.5px; width: 72px; height: 72px;
+  transform: translateY(50%);
+  background: #FFFFFF url("autolab-icon-64.svg") center / contain no-repeat;
+  border-radius: 50%;
+  pointer-events: none;
+}
+html body header .brand {
+  color: var(--so-sub);
+  font-family: "JetBrains Mono", "Noto Sans TC", monospace;
+  font-weight: 500;
+}
+html body header .brand .dot {
+  width: 22px; height: 22px; border-radius: 0; box-shadow: none;
+  background: url("autolab-icon-32.svg") center / contain no-repeat;
+}
+html body header h1 { color: var(--so-ink); font-weight: 900; }
+html body header h1 .hl { color: var(--so-teal); box-shadow: inset 0 -10px 0 var(--so-mango-lt); }
+html body header .sub { color: var(--so-sub); }
+html body header .formula b { border-radius: 4px; }
+html body header .formula .c { color: var(--so-ink); }
+html body header .formula .eq { color: var(--so-sub); }
+html body header .formula .res { background: var(--so-ink); border-color: var(--so-ink); color: #FFFFFF; }
+
+/* ---------- 搜尋列＋跳轉 ---------- */
+html body .controls { background: rgba(245,245,247,.95); border-bottom-color: var(--so-line); }
+html body #q { border-radius: 4px; border-color: #C7C7CC; }
+html body #q:focus { border-color: var(--so-teal); box-shadow: 0 0 0 3px rgba(0,112,138,.15); }
+html body .jump a { border-radius: 4px; }
+html body .jump a.jc { color: var(--so-ink); }
+
+/* ---------- 區塊標題＋卡片 ---------- */
+html body .sec-badge { border-radius: 4px; font-family: "Inter Tight", sans-serif; }
+html body #sec-c .sec-badge { color: var(--so-ink); }
+html body .cat-title { color: var(--so-ink); }
+html body .card { border-radius: 4px; border-color: var(--so-line); }
+html body .card:hover { border-color: var(--so-teal); box-shadow: none; transform: none; }
+html body .card.sel { border-color: var(--so-teal); background: var(--so-teal-lt); box-shadow: inset 4px 0 0 var(--so-teal); }
+html body #sec-c .card:hover, html body #sec-c .card.sel { border-color: var(--so-ink); }
+html body #sec-c .card.sel { background: var(--so-mango-lt); box-shadow: inset 4px 0 0 var(--so-mango); }
+html body #sec-e .card:hover, html body #sec-e .card.sel { border-color: var(--so-orchid); }
+html body #sec-e .card.sel { background: var(--so-orchid-lt); box-shadow: inset 4px 0 0 var(--so-orchid); }
+html body .card .meta { font-family: "JetBrains Mono", "Noto Sans TC", monospace; font-weight: 500; }
+html body #sec-c .card .meta, html body #sec-c .card .pick, html body #sec-c .card.sel .pick { color: var(--so-ink); }
+html body #sec-e .card .meta, html body #sec-e .card .pick, html body #sec-e .card.sel .pick { color: var(--so-orchid); }
+
+/* 依工具手風琴 */
+html body .tool { border-radius: 4px; border-color: var(--so-line); }
+html body .tool-head:hover { background: var(--so-teal-lt); }
+html body .tool-tag { border-radius: 2px; background: var(--so-teal-lt); color: var(--so-teal); }
+html body .tcase { border-radius: 4px; background: var(--so-mist); }
+html body .tc-copy, html body .tc-view { border-radius: 4px; }
+html body .tc-copy { background: var(--so-teal); color: #FFFFFF; }
+html body .tc-copy:hover { background: var(--so-teal-dk); }
+html body .tc-view { background: #FFFFFF; border: 1px solid var(--so-line); color: var(--so-ink); }
+html body .tc-full { background: var(--so-ink); color: #F5F5F7; border-radius: 4px; }
+
+/* ---------- 底部組合器 ---------- */
+html body .combiner { border-top: 3px solid var(--so-ink); box-shadow: none; }
+html body .slot { border-radius: 4px; }
+html body .slot.c .lbl { color: var(--so-ink); }
+html body .slot.filled.r { border-color: var(--so-teal); background: var(--so-teal-lt); }
+html body .slot.filled.c { border-color: var(--so-mango); background: var(--so-mango-lt); }
+html body .slot.filled.e { border-color: var(--so-orchid); background: var(--so-orchid-lt); }
+html body .btn { border-radius: 4px; }
+html body .btn.copy { background: var(--so-teal); color: #FFFFFF; }
+html body .btn.copy:hover { background: var(--so-teal-dk); }
+html body .btn.clr { background: var(--so-mist); color: var(--so-ink); }
+html body #outbox { border-radius: 4px; background: var(--so-mist); }
+
+html body footer a { color: var(--so-teal); }
+html body .toast { background: var(--so-ink); border-radius: 4px; }
+
+@media (max-width: 720px) {
+  html body header { padding-bottom: 64px; }
+  html body header::after { width: 48px; height: 48px; right: 16px; }
+  html body header::before { bottom: 30px; }
+  html body header::after { bottom: 31.5px; }
+}
